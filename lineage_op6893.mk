@@ -25,7 +25,6 @@ $(call inherit-product, device/oplus/op6893/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # EvolutionX Flags
-EVO_BUILD_TYPE := Official
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_BUILD_APERTURE_CAMERA := false
 TARGET_HAS_UDFPS := true
