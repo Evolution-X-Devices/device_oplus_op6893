@@ -24,6 +24,7 @@ namespace_imports = [
     'hardware/google/pixel/power-libperfmgr',
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
+    'hardware/mediatek/wlan/wifi_hal',
     'hardware/oplus',
 ]
 
@@ -87,7 +88,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libmtkcam_featurepolicy.so': blob_fixup()
         .sig_replace('34 E8 87 40 B9', '34 28 02 80 52'),
     'vendor/bin/hw/android.hardware.wifi@1.0-service-lazy': blob_fixup()
-        .replace_needed('libwifi-hal.so', 'libwifi-hal-mtk.so'),
+        .replace_needed('libwifi-hal.so', 'libwifi-hal-mediatek.so'),
     'system/lib*/libem_support_jni.so': blob_fixup()
         .add_needed('libjni_shim.so'),
     'vendor/lib64/hw/sensors.mt6893.so': blob_fixup()
